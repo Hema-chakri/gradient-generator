@@ -5,16 +5,35 @@ export const Heading = styled.h1`
   color: #ffffff;
 `
 
+export const ResponsiveContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 550px;
+  @media screen and (min-width: 768px) {
+    width: 85%;
+    max-width: 1110px;
+  }
+`
 export const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
+  background-image: linear-gradient(${props => props.gradientValue});
 `
 export const Paragraph = styled.p`
   color: #ffffff;
 `
 export const UnorderedList = styled.ul`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    width: 60%;
+    max-width: 425px;
+  }
 `
 export const CustomPara = styled.p`
   color: #ffffff;
